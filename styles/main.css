@@ -134,6 +134,15 @@ i {
 	margin-top: 5px;
 }
 
+#contact-list {
+	disply: flex;
+	align-content: center;
+}
+
+#adress {
+	color: var(--mainBgColor);
+}
+
 #email {
 	color: var(--mainTextColor);
 }
@@ -176,15 +185,23 @@ i {
 	margin-bottom: 20px;
 }
 
-#wrapper--experience ul,
-#wrapper--education ul {
-	list-style-type: square;
-	padding-left: 0;
+.card--work-history ul {
+	list-style: disc;
 }
 
-#wrapper--experience ul li,
-#wrapper--education ul li {
-	list-style-position: inside;
+.card--work-history li {
+	display: flex;
+	align-items: flex-start; /* Align items at the top */
+	gap: 8px; /* Space between bullet and text */
+	position: relative;
+}
+
+.card--work-history li::before {
+	content: "•"; /* Bullet */
+	color: var(--mainTextColor); /* Match text color */
+	font-size: 1.2em;
+	line-height: 1.5em; /* Prevents stretching */
+	flex-shrink: 0; /* Ensures bullet doesn't resize */
 }
 
 #wrapper--education {
